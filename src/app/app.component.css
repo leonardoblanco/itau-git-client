@@ -1,0 +1,50 @@
+.navbar-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 8px 16px;
+    background-color: #F65E01;
+    color: #fff;
+}
+
+.navbar-header .mat-button:last-child {
+    margin-left: 0px;
+}
+
+.flex-spacer {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1
+}
+
+.itau-logo {
+    height: 48px;
+    margin: 0 4px 3px 0;
+    vertical-align: middle;
+    position: relative;
+    padding: 0px;
+    display: inline-block
+}
+
+.github-logo {
+    height: 21px;
+    margin: 0 7px 2px 0;
+    vertical-align: middle
+}
+
+.navbar-link {
+    text-decoration: inherit;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1
+}
+
+.navbar,
+.navbar-show-small {
+    display: none
+}

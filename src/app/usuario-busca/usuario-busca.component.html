@@ -1,0 +1,9 @@
+<div style="display:block; text-align: center" id="form-busca">
+  <form (ngSubmit)="onFormSubmit()" class="search-form">
+    <mat-form-field>
+      <input matInput placeholder="Usuario GitHub" [formControl]="usuarioFormControl" size="30" max="30">
+      <mat-error *ngIf="usuarioFormControl.invalid">{{getErrorMessage()}}</mat-error>
+    </mat-form-field>
+    <button mat-raised-button color="primary">Buscar</button>
+  </form>
+</div>

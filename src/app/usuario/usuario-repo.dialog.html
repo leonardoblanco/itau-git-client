@@ -1,0 +1,10 @@
+<h1 mat-dialog-title>Detalhes do Repositório</h1>
+<div mat-dialog-content>
+  <strong>Nome</strong>: {{data.repos.id}} <br/><br/>
+  <strong>Descrição</strong>: {{data.repos.description}} <br/><br/>
+  <strong>Estrelas</strong>: {{data.repos.stargazers_count}} <br/><br/>
+  <br/><br/>
+  <div style="display: block; text-align:center">
+    <a [href]="data.repos.html_url" mat-raised-button color="primary" style="margin: 0 auto;" target="_blank">Ir Para Reposiório</a>
+  </div>
+</div>

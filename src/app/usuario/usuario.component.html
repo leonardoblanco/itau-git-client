@@ -1,0 +1,50 @@
+<div class="viewer-wrapper">
+  <div class="viewer-title">
+    <div class="viewer-title-spacer">Informações do Usuário</div>
+  </div>
+  <div class="viewer-body">
+    <mat-card class="usuario-card">
+      <mat-card-header>
+        <div mat-card-avatar class="header-image"></div>
+        <mat-card-title id="nomeUsuarioGit">{{usuario?.name}}</mat-card-title>
+        <mat-card-subtitle>{{usuario?.login}}</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image [src]="usuario?.avatar_url" height="350" alt="Avatar">
+      <mat-card-content>
+        <p>
+          {{usuario?.bio}}
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        {{usuario?.followers}} Followers {{usuario?.following}} Following
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
+
+<div class="viewer-wrapper">
+  <div class="viewer-title">
+    <div class="viewer-title-spacer">Repositorios do Usuário</div>
+  </div>
+  <div class="viewer-body">
+    <div class="repos-container mat-elevation-z8">
+      <mat-table #table [dataSource]="dataSource" matSort matSortActive="stargazers_count" matSortDirection="desc">
+
+        <ng-container matColumnDef="name">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Nome </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="stargazers_count">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Stars </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.stargazers_count}} </mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;" (click)=openDialog(row)></mat-row>
+      </mat-table>
+      <mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]" [showFirstLastButtons]="true">
+      </mat-paginator>
+    </div>
+  </div>
+</div>
