@@ -1,5 +1,8 @@
 import { browser, by, element } from 'protractor';
 
+/**
+ * Testes end to end
+ */
 export class AppPage {
   navigateTo() {
     return browser.get('/');

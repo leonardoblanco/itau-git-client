@@ -1,3 +1,4 @@
+//Imports Angular
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -5,8 +6,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 
+//Imports Angular Material
 import { MatButtonModule, MatFormFieldModule, MatInputModule, MatCardModule, MatTableModule, MatSortModule, MatPaginatorModule, MatIconModule, MatDialogModule } from '@angular/material';
 
+//Imports Aplicacao
 import { AppComponent } from './app.component';
 import { UsuarioBuscaComponent } from './usuario-busca/usuario-busca.component';
 import { UsuarioComponent } from './usuario/usuario.component';
@@ -16,7 +19,7 @@ import { UsuarioResolve } from './resolver/usuario.resolve';
 import { UsuarioReposResolve } from './resolver/usuario-repos.resolve';
 import { UsuarioNaoEncontradoComponent } from './usuario-nao-encontrado/usuario-nao-encontrado.component';
 
-
+//Definicao de Rotas
 const appRoutes: Routes = [
   {
     path: 'usuario/busca',
@@ -35,7 +38,7 @@ const appRoutes: Routes = [
   { path: '**', component: UsuarioBuscaComponent }
 ];
 
-
+//Configuracao e Bootstrap
 @NgModule({
   declarations: [
     AppComponent,

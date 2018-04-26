@@ -8,6 +8,9 @@ import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 import { catchError, map, tap } from 'rxjs/operators';
 
+/**
+ * Resolve do usuario antes de carregar o componente de usuario
+ */
 @Injectable()
 export class UsuarioResolve implements Resolve<Usuario> {
   constructor(private usuarioService: UsuarioService, private router:Router) {}

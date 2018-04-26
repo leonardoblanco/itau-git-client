@@ -26,7 +26,9 @@ const appRoutes: Routes = [
   },
   { path: '**', component: UsuarioBuscaComponent }
 ];
-
+/**
+ * Teste unitario do component de usuario nao encontrado
+ */
 describe('UsuarioNaoEncontradoComponent', () => {
   let component: UsuarioNaoEncontradoComponent;
   let fixture: ComponentFixture<UsuarioNaoEncontradoComponent>;

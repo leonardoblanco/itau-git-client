@@ -11,8 +11,12 @@ import { Usuario } from '../entidade/usuario';
   templateUrl: './usuario.component.html',
   styleUrls: ['./usuario.component.css']
 })
+/**
+ * Usuario Component
+ */
 export class UsuarioComponent implements OnInit {
 
+  //Vars
   usuario:Usuario;
   displayedColumns = ['name', 'stargazers_count'];
   dataSource;
@@ -27,11 +31,13 @@ export class UsuarioComponent implements OnInit {
     this.dataSource = new MatTableDataSource(this.route.snapshot.data['repos']);
   }
 
+  //Definindo Ordenacao da lista de repositorios
   ngAfterViewInit() {
     this.dataSource.sort = this.sort;
     this.dataSource.paginator = this.paginator;
   }
 
+  //Abertura de modal dos detalhes do repositorio
   openDialog(repo){
     this.dialog.open(UsuarioDialog, {
       data: {
@@ -41,6 +47,9 @@ export class UsuarioComponent implements OnInit {
   }
 }
 
+/**
+ * Componente da modal dos detalhes do repositorio
+ */
 @Component({
   selector: 'usuario-repo.dialog',
   templateUrl: 'usuario-repo.dialog.html',

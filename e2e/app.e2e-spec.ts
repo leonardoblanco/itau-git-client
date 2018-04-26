@@ -1,5 +1,8 @@
 import { AppPage } from './app.po';
 
+/**
+ * Tests e2e
+ */
 describe('itau-git-client App', () => {
   let page: AppPage;
   let botaoBuscar;
